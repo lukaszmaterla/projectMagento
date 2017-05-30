@@ -58,7 +58,7 @@ class MenuTest extends \PHPUnit_Framework_TestCase
                     'id' => 'Magento_Backend::system2_acl',
                     'title' => 'Acl',
                     'module' => 'Magento_Backend',
-                    'action' => 'admin/backend/acl/index',
+                    'action' => 'admin/backend/acl/Index',
                     'resource' => 'Magento_Backend::system2_acl',
                 ]
             ),

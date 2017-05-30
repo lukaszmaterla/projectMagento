@@ -113,7 +113,7 @@ class Curl extends AbstractCurl implements ReviewInterface
      */
     protected function getReviewId()
     {
-        $url = 'review/product/index/sort/review_id/dir/desc/';
+        $url = 'review/product/Index/sort/review_id/dir/desc/';
         $regex = '/class="[^"]+col-id[^"]+"[^>]*>\s*([0-9]+)\s*</';
         $extractor = new Extractor($url, $regex);
         $match = $extractor->getData();

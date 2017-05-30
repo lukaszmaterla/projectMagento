@@ -27,7 +27,7 @@ class Options extends SimpleElement
      *
      * @var string
      */
-    protected $option = '[data-index="attribute_options_select"] tbody tr';
+    protected $option = '[data-Index="attribute_options_select"] tbody tr';
 
     /**
      * Set value.

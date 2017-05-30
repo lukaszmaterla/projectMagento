@@ -17,7 +17,7 @@ class MassDeleteTest extends \Magento\TestFramework\TestCase\AbstractBackendCont
      *
      * @var string
      */
-    protected $baseControllerUrl = 'http://localhost/index.php/backend/customer/index/index';
+    protected $baseControllerUrl = 'http://localhost/Index.php/backend/customer/Index/Index';
 
     protected function tearDown()
     {
@@ -38,7 +38,7 @@ class MassDeleteTest extends \Magento\TestFramework\TestCase\AbstractBackendCont
     public function testMassDeleteAction()
     {
         $this->getRequest()->setPostValue('selected', [1])->setPostValue('namespace', 'customer_listing');
-        $this->dispatch('backend/customer/index/massDelete');
+        $this->dispatch('backend/customer/Index/massDelete');
         $this->assertSessionMessages(
             $this->equalTo(['A total of 1 record(s) were deleted.']),
             \Magento\Framework\Message\MessageInterface::TYPE_SUCCESS
@@ -53,7 +53,7 @@ class MassDeleteTest extends \Magento\TestFramework\TestCase\AbstractBackendCont
     public function testMassDeleteActionNoCustomerIds()
     {
         $this->getRequest()->setPostValue('namespace', 'customer_listing');
-        $this->dispatch('backend/customer/index/massDelete');
+        $this->dispatch('backend/customer/Index/massDelete');
         $this->assertSessionMessages(
             $this->equalTo(['Please select item(s).']),
             \Magento\Framework\Message\MessageInterface::TYPE_ERROR

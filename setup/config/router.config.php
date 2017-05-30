@@ -14,7 +14,7 @@ return [
                     'route'    => '/',
                     'defaults' => [
                         'controller' => 'Magento\Setup\Controller\Index',
-                        'action'     => 'index',
+                        'action'     => 'Index',
                     ],
                 ],
             ],
@@ -25,7 +25,7 @@ return [
                     'defaults' => [
                         '__NAMESPACE__' => 'Magento\Setup\Controller',
                         'controller'    => 'Index',
-                        'action'        => 'index',
+                        'action'        => 'Index',
                     ],
                     'constraints' => [
                         'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',

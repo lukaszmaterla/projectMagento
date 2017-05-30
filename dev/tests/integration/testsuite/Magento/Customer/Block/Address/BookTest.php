@@ -55,7 +55,7 @@ class BookTest extends \PHPUnit_Framework_TestCase
     public function testGetAddressEditUrl()
     {
         $this->assertEquals(
-            'http://localhost/index.php/customer/address/edit/id/1/',
+            'http://localhost/Index.php/customer/address/edit/id/1/',
             $this->_block->getAddressEditUrl(1)
         );
     }

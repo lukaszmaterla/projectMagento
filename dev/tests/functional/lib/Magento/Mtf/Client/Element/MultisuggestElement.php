@@ -18,7 +18,7 @@ class MultisuggestElement extends SuggestElement
      *
      * @var string
      */
-    protected $categoryChoice = '//div[contains(@data-index, "category_ids")]';
+    protected $categoryChoice = '//div[contains(@data-Index, "category_ids")]';
 
     /**
      * Selector choice item

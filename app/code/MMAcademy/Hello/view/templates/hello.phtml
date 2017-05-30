@@ -1,0 +1,12 @@
+<?php /** @var \MMAcademy\Hello\Block\Hello $this */ ?>
+    <h1><?= $this->getHelloText() ?></h1>
+
+<?php if($this->canShowForm()): ?>
+    <form action="<?= $this->getFormUrl() ?>" method="post">
+        <label for="hello-name"><?= __('Type in Your name') ?></label>
+        <input type="text" name="name" id="hello-name"/>
+        <button class="action primary">
+            <span><?= __('Greet') ?></span>
+        </button>
+    </form>
+<?php endif ?>

@@ -12,7 +12,7 @@ class StoreTest extends \Magento\TestFramework\TestCase\AbstractBackendControlle
 {
     public function testIndexAction()
     {
-        $this->dispatch('backend/admin/system_store/index');
+        $this->dispatch('backend/admin/system_store/Index');
 
         $response = $this->getResponse()->getBody();
 

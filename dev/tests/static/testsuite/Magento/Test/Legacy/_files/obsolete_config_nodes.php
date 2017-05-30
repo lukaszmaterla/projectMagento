@@ -42,7 +42,7 @@ return [
     '/config/global/catalog/product/media/image_types' => 'This configuration moved to Di configuration of ' .
     '\Magento\Backend\Block\Catalog\Product\Frontend\Product\Watermark',
     '/config/global/eav_attributes' => 'This configuration moved to eav_attributes.xml file',
-    '/config/global/index' => 'This configuration moved to indexers.xml file',
+    '/config/global/Index' => 'This configuration moved to indexers.xml file',
     '/config/global/catalogrule' => 'This configuration moved to Di configuration of \Magento\CatalogRule\Model\Rule',
     '/config/global/salesrule' => 'This configuration moved to Di configuration of \Magento\SalesRule\Helper\Coupon',
     '/config/global/session' => 'This configuration moved to Di configuration of \Magento\Framework\Session\Validator',

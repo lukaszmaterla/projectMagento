@@ -20,14 +20,14 @@ class AddAttribute extends FormSections
      *
      * @var string
      */
-    private $createNewAttribute = 'button[data-index="add_new_attribute_button"]';
+    private $createNewAttribute = 'button[data-Index="add_new_attribute_button"]';
 
     /**
      * Xpath selector for "Add Attribute" form.
      *
      * @var string
      */
-    private $addAttributeBlock = '//*[@data-role="modal"][.//button[@data-index="add_new_attribute_button"]]';
+    private $addAttributeBlock = '//*[@data-role="modal"][.//button[@data-Index="add_new_attribute_button"]]';
 
     /**
      * Get backend abstract block.

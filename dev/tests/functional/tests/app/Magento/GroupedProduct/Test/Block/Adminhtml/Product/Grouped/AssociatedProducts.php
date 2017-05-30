@@ -22,7 +22,7 @@ class AssociatedProducts extends Tab
      *
      * @var string
      */
-    protected $addNewOption = '[data-index="grouped_products_button"]';
+    protected $addNewOption = '[data-Index="grouped_products_button"]';
 
     /**
      * Associated products grid locator.
@@ -36,7 +36,7 @@ class AssociatedProducts extends Tab
      *
      * @var string
      */
-    protected $associatedProductsBlock = '[data-index="associated"]';
+    protected $associatedProductsBlock = '[data-Index="associated"]';
 
     /**
      * Selector for remove button.

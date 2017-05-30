@@ -39,14 +39,14 @@ class ProductForm extends FormSections
      *
      * @var string
      */
-    protected $customSection = '[data-index="%s"] .admin__collapsible-title';
+    protected $customSection = '[data-Index="%s"] .admin__collapsible-title';
 
     /**
      * Attribute block selector.
      *
      * @var string
      */
-    protected $attributeBlock = '[data-index="%s"]';
+    protected $attributeBlock = '[data-Index="%s"]';
 
     /**
      * Magento form loader.

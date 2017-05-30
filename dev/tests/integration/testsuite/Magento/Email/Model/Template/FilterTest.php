@@ -78,17 +78,17 @@ class FilterTest extends \PHPUnit_Framework_TestCase
         $this->assertStringMatchesFormat('http://example.com/%sarbitrary_url/', $url);
 
         $url = $this->model->storeDirective(
-            ['{{store url="translation/ajax/index"}}', 'store', ' url="translation/ajax/index"']
+            ['{{store url="translation/ajax/Index"}}', 'store', ' url="translation/ajax/Index"']
         );
-        $this->assertStringMatchesFormat('http://example.com/%stranslation/ajax/index/', $url);
+        $this->assertStringMatchesFormat('http://example.com/%stranslation/ajax/Index/', $url);
 
         $this->model->setStoreId(0);
         $backendUrlModel = $this->objectManager->create('Magento\Backend\Model\Url');
         $this->model->setUrlModel($backendUrlModel);
         $url = $this->model->storeDirective(
-            ['{{store url="translation/ajax/index"}}', 'store', ' url="translation/ajax/index"']
+            ['{{store url="translation/ajax/Index"}}', 'store', ' url="translation/ajax/Index"']
         );
-        $this->assertStringMatchesFormat('http://example.com/index.php/backend/translation/ajax/index/%A', $url);
+        $this->assertStringMatchesFormat('http://example.com/Index.php/backend/translation/ajax/Index/%A', $url);
     }
 
     /**

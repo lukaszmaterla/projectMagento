@@ -82,7 +82,7 @@ class CategoryTest extends \Magento\TestFramework\TestCase\AbstractBackendContro
 
         if (empty($postData['return_session_messages_only'])) {
             $this->assertRedirect(
-                $this->stringContains('http://localhost/index.php/backend/catalog/category/edit/')
+                $this->stringContains('http://localhost/Index.php/backend/catalog/category/edit/')
             );
         } else {
             $result = \Magento\TestFramework\Helper\Bootstrap::getObjectManager()->get(

@@ -19,7 +19,7 @@ class ProductDetails extends Section
      *
      * @var string
      */
-    protected $categoryIds = '.admin__field[data-index="category_ids"]';
+    protected $categoryIds = '.admin__field[data-Index="category_ids"]';
 
     /**
      * Locator for following sibling of category element.

@@ -35,7 +35,7 @@ class Product extends Form
     {
         $mapping = $this->dataMapping($fields);
         $newFields = $this->_getData($mapping);
-        $newFields['name'] = $this->_rootElement->find('[data-index="name"]')->getText();
+        $newFields['name'] = $this->_rootElement->find('[data-Index="name"]')->getText();
         return $newFields;
     }
 }

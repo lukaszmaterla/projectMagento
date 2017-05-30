@@ -35,7 +35,7 @@ class AccountTest extends \Magento\TestFramework\TestCase\AbstractController
     public function testIndexAction()
     {
         $this->login(1);
-        $this->dispatch('customer/account/index');
+        $this->dispatch('customer/account/Index');
 
         $body = $this->getResponse()->getBody();
         $this->assertContains('Green str, 67', $body);
@@ -268,11 +268,11 @@ class AccountTest extends \Magento\TestFramework\TestCase\AbstractController
             ->setPostValue('create_address', true);
 
         $this->dispatch('customer/account/createPost');
-        $this->assertRedirect($this->stringContains('customer/account/index/'));
+        $this->assertRedirect($this->stringContains('customer/account/Index/'));
         $this->assertSessionMessages(
             $this->equalTo([
                 'You must confirm your account. Please check your email for the confirmation link or '
-                . '<a href="http://localhost/index.php/customer/account/confirmation/email/'
+                . '<a href="http://localhost/Index.php/customer/account/confirmation/email/'
                 . $email . '/">click here</a> for a new link.'
             ]),
             MessageInterface::TYPE_SUCCESS
@@ -317,7 +317,7 @@ class AccountTest extends \Magento\TestFramework\TestCase\AbstractController
         $this->assertSessionMessages(
             $this->equalTo(['There is already an account with this email address. ' .
                 'If you are sure that it is your email address, ' .
-                '<a href="http://localhost/index.php/customer/account/forgotpassword/">click here</a>' .
+                '<a href="http://localhost/Index.php/customer/account/forgotpassword/">click here</a>' .
                 ' to get your password and access your account.', ]),
             MessageInterface::TYPE_ERROR
         );
@@ -333,7 +333,7 @@ class AccountTest extends \Magento\TestFramework\TestCase\AbstractController
             ->setPostValue(['email' => 'customer@needAconfirmation.com']);
 
         $this->dispatch('customer/account/confirmation');
-        $this->assertRedirect($this->stringContains('customer/account/index'));
+        $this->assertRedirect($this->stringContains('customer/account/Index'));
         $this->assertSessionMessages(
             $this->equalTo(['Please check your email for confirmation key.']),
             MessageInterface::TYPE_SUCCESS
@@ -352,7 +352,7 @@ class AccountTest extends \Magento\TestFramework\TestCase\AbstractController
             ]);
 
         $this->dispatch('customer/account/confirmation');
-        $this->assertRedirect($this->stringContains('customer/account/index'));
+        $this->assertRedirect($this->stringContains('customer/account/Index'));
         $this->assertSessionMessages(
             $this->equalTo(['This email does not require confirmation.']),
             MessageInterface::TYPE_SUCCESS

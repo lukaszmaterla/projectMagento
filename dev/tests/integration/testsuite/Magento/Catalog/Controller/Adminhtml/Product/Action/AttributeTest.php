@@ -32,7 +32,7 @@ class AttributeTest extends \Magento\TestFramework\TestCase\AbstractBackendContr
         /** @var \Magento\Catalog\Helper\Product\Edit\Action\Attribute $attributeHelper */
         $attributeHelper = $objectManager->get('Magento\Catalog\Helper\Product\Edit\Action\Attribute');
         $expectedUrl = $urlBuilder->getUrl(
-            'catalog/product/index',
+            'catalog/product/Index',
             ['store' => $attributeHelper->getSelectedStoreId()]
         );
         $isRedirectPresent = false;

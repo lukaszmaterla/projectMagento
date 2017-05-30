@@ -104,7 +104,7 @@ class CreateTest extends \Magento\TestFramework\TestCase\AbstractBackendControll
         /** @var $order \Magento\Sales\Model\AdminOrder\Create */
         $order = $this->_objectManager->get('Magento\Sales\Model\AdminOrder\Create');
         $order->addProducts([$product->getId() => ['qty' => 1]]);
-        $this->dispatch('backend/sales/order_create/index');
+        $this->dispatch('backend/sales/order_create/Index');
         $html = $this->getResponse()->getBody();
 
         $this->assertSelectCount('div#order-customer-selector', true, $html);
@@ -144,8 +144,8 @@ class CreateTest extends \Magento\TestFramework\TestCase\AbstractBackendControll
     public function getAclResourceDataProvider()
     {
         return [
-            ['index', false, 'Magento_Sales::create'],
-            ['index', true, 'Magento_Sales::reorder'],
+            ['Index', false, 'Magento_Sales::create'],
+            ['Index', true, 'Magento_Sales::reorder'],
             ['save', false, 'Magento_Sales::create'],
             ['save', true, 'Magento_Sales::reorder'],
             ['reorder', false, 'Magento_Sales::reorder'],

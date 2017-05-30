@@ -11,7 +11,7 @@ use Magento\Mtf\Constraint\AbstractConstraint;
 
 /**
  * Class AssertOrderReleaseSuccessMessage
- * Assert release success message is displayed on order index page
+ * Assert release success message is displayed on order Index page
  */
 class AssertOrderReleaseSuccessMessage extends AbstractConstraint
 {
@@ -21,7 +21,7 @@ class AssertOrderReleaseSuccessMessage extends AbstractConstraint
     const SUCCESS_RELEASE_MESSAGE = '%d order(s) have been released from on hold status.';
 
     /**
-     * Assert release success message is displayed on order index page
+     * Assert release success message is displayed on order Index page
      *
      * @param OrderIndex $orderIndex
      * @param int $ordersCount
@@ -42,6 +42,6 @@ class AssertOrderReleaseSuccessMessage extends AbstractConstraint
      */
     public function toString()
     {
-        return 'Release success message is displayed on order index page.';
+        return 'Release success message is displayed on order Index page.';
     }
 }

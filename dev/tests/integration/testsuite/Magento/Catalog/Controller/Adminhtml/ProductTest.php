@@ -30,7 +30,7 @@ class ProductTest extends \Magento\TestFramework\TestCase\AbstractBackendControl
         $repository = $this->_objectManager->create('Magento\Catalog\Model\ProductRepository');
         $product = $repository->get('simple');
         $this->dispatch('backend/catalog/product/save/id/' . $product->getEntityId());
-        $this->assertRedirect($this->stringStartsWith('http://localhost/index.php/backend/catalog/product/new/'));
+        $this->assertRedirect($this->stringStartsWith('http://localhost/Index.php/backend/catalog/product/new/'));
         $this->assertSessionMessages(
             $this->contains('You saved the product.'),
             \Magento\Framework\Message\MessageInterface::TYPE_SUCCESS
@@ -46,11 +46,11 @@ class ProductTest extends \Magento\TestFramework\TestCase\AbstractBackendControl
         $repository = $this->_objectManager->create('Magento\Catalog\Model\ProductRepository');
         $product = $repository->get('simple');
         $this->dispatch('backend/catalog/product/save/id/' . $product->getEntityId());
-        $this->assertRedirect($this->stringStartsWith('http://localhost/index.php/backend/catalog/product/edit/'));
+        $this->assertRedirect($this->stringStartsWith('http://localhost/Index.php/backend/catalog/product/edit/'));
         $this->assertRedirect(
             $this->logicalNot(
                 $this->stringStartsWith(
-                    'http://localhost/index.php/backend/catalog/product/edit/id/' . $product->getEntityId() . '/'
+                    'http://localhost/Index.php/backend/catalog/product/edit/id/' . $product->getEntityId() . '/'
                 )
             )
         );

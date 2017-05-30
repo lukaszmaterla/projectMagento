@@ -87,7 +87,7 @@ class AttributeTest extends \Magento\TestFramework\TestCase\AbstractBackendContr
         $this->dispatch('backend/catalog/product_attribute/save');
         $this->assertEquals(302, $this->getResponse()->getHttpResponseCode());
         $this->assertContains(
-            'catalog/product_attribute/index',
+            'catalog/product_attribute/Index',
             $this->getResponse()->getHeader('Location')->getFieldValue()
         );
         /** @var \Magento\Framework\Message\Collection $messages */
@@ -112,7 +112,7 @@ class AttributeTest extends \Magento\TestFramework\TestCase\AbstractBackendContr
         $this->dispatch('backend/catalog/product_attribute/save');
         $this->assertEquals(302, $this->getResponse()->getHttpResponseCode());
         $this->assertContains(
-            'catalog/product_attribute/index',
+            'catalog/product_attribute/Index',
             $this->getResponse()->getHeader('Location')->getFieldValue()
         );
         /** @var \Magento\Framework\Message\Collection $messages */
@@ -158,7 +158,7 @@ class AttributeTest extends \Magento\TestFramework\TestCase\AbstractBackendContr
         $this->dispatch('backend/catalog/product_attribute/save');
         $this->assertEquals(302, $this->getResponse()->getHttpResponseCode());
         $this->assertContains(
-            'catalog/product_attribute/index',
+            'catalog/product_attribute/Index',
             $this->getResponse()->getHeader('Location')->getFieldValue()
         );
     }

@@ -10,11 +10,11 @@ return [
         'display_exceptions'       => true,
         'doctype'                  => 'HTML5',
         'not_found_template'       => 'error/404',
-        'exception_template'       => 'error/index',
+        'exception_template'       => 'error/Index',
         'template_map' => [
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
-            'error/index'             => __DIR__ . '/../view/error/index.phtml',
+            'error/Index'             => __DIR__ . '/../view/error/index.phtml',
         ],
         'template_path_stack' => [
             'setup' => __DIR__ . '/../view',

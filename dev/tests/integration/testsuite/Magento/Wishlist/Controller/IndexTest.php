@@ -68,7 +68,7 @@ class IndexTest extends \Magento\TestFramework\TestCase\AbstractController
      */
     public function testItemColumnBlock()
     {
-        $this->dispatch('wishlist/index/index');
+        $this->dispatch('wishlist/Index/Index');
         $body = $this->getResponse()->getBody();
         $this->assertSelectCount('img[src~="small_image.jpg"][alt="Simple Product"]', 1, $body);
         $this->assertSelectCount('textarea[name~="description"]', 1, $body);
@@ -93,13 +93,13 @@ class IndexTest extends \Magento\TestFramework\TestCase\AbstractController
 
         $product = $productRepository->get('product-with-xss');
 
-        $this->dispatch('wishlist/index/add/product/' . $product->getId() . '?nocookie=1');
+        $this->dispatch('wishlist/Index/add/product/' . $product->getId() . '?nocookie=1');
 
         $this->assertSessionMessages(
             $this->equalTo(
                 [
                     "\n&lt;script&gt;alert(&quot;xss&quot;);&lt;/script&gt; has been added to your Wish List. "
-                    . 'Click <a href="http://localhost/index.php/">here</a> to continue shopping.',
+                    . 'Click <a href="http://localhost/Index.php/">here</a> to continue shopping.',
                 ]
             ),
             \Magento\Framework\Message\MessageInterface::TYPE_SUCCESS
@@ -113,7 +113,7 @@ class IndexTest extends \Magento\TestFramework\TestCase\AbstractController
     {
         $formKey = $this->_objectManager->get('Magento\Framework\Data\Form\FormKey')->getFormKey();
         $this->getRequest()->setParam('form_key', $formKey);
-        $this->dispatch('wishlist/index/allcart');
+        $this->dispatch('wishlist/Index/allcart');
 
         /** @var \Magento\Checkout\Model\Cart $cart */
         $cart = $this->_objectManager->get('Magento\Checkout\Model\Cart');
@@ -147,7 +147,7 @@ class IndexTest extends \Magento\TestFramework\TestCase\AbstractController
             'wishlist',
             $this->_objectManager->get('Magento\Wishlist\Model\Wishlist')->loadByCustomerId(1)
         );
-        $this->dispatch('wishlist/index/send');
+        $this->dispatch('wishlist/Index/send');
 
         /** @var \Magento\TestFramework\Mail\Template\TransportBuilderMock $transportBuilder */
         $transportBuilder = $this->_objectManager->get('Magento\TestFramework\Mail\Template\TransportBuilderMock');

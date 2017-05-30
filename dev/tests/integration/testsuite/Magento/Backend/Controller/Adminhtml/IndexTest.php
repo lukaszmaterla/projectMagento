@@ -18,7 +18,7 @@ class IndexTest extends \Magento\TestFramework\TestCase\AbstractBackendControlle
     public function testNotLoggedIndexAction()
     {
         $this->_auth->logout();
-        $this->dispatch('backend/admin/index/index');
+        $this->dispatch('backend/admin/Index/Index');
         /** @var $backendUrlModel \Magento\Backend\Model\UrlInterface */
         $backendUrlModel = \Magento\TestFramework\Helper\Bootstrap::getObjectManager()->get(
             'Magento\Backend\Model\UrlInterface'
@@ -35,7 +35,7 @@ class IndexTest extends \Magento\TestFramework\TestCase\AbstractBackendControlle
      */
     public function testLoggedIndexAction()
     {
-        $this->dispatch('backend/admin/index/index');
+        $this->dispatch('backend/admin/Index/Index');
         $this->assertRedirect();
     }
 
@@ -46,7 +46,7 @@ class IndexTest extends \Magento\TestFramework\TestCase\AbstractBackendControlle
     {
         $this->getRequest()->setParam('isAjax', 'true');
         $this->getRequest()->setPostValue('query', 'dummy');
-        $this->dispatch('backend/admin/index/globalSearch');
+        $this->dispatch('backend/admin/Index/globalSearch');
 
         $actual = $this->getResponse()->getBody();
         $this->assertEquals([], json_decode($actual));

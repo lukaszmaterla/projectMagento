@@ -18,7 +18,7 @@ class MassAssignGroupTest extends \Magento\TestFramework\TestCase\AbstractBacken
      *
      * @var string
      */
-    protected $baseControllerUrl = 'http://localhost/index.php/backend/customer/index/index';
+    protected $baseControllerUrl = 'http://localhost/Index.php/backend/customer/Index/Index';
 
     /**
      * @var CustomerRepositoryInterface
@@ -58,7 +58,7 @@ class MassAssignGroupTest extends \Magento\TestFramework\TestCase\AbstractBacken
             ->setParam('group', 0)
             ->setPostValue('namespace', 'customer_listing')
             ->setPostValue('selected', [1]);
-        $this->dispatch('backend/customer/index/massAssignGroup');
+        $this->dispatch('backend/customer/Index/massAssignGroup');
         $this->assertSessionMessages(
             $this->equalTo(['A total of 1 record(s) were updated.']),
             \Magento\Framework\Message\MessageInterface::TYPE_SUCCESS
@@ -76,7 +76,7 @@ class MassAssignGroupTest extends \Magento\TestFramework\TestCase\AbstractBacken
     public function testMassAssignGroupActionNoCustomerIds()
     {
         $this->getRequest()->setParam('group', 0)->setPostValue('namespace', 'customer_listing');
-        $this->dispatch('backend/customer/index/massAssignGroup');
+        $this->dispatch('backend/customer/Index/massAssignGroup');
         $this->assertSessionMessages(
             $this->equalTo(['Please select item(s).']),
             \Magento\Framework\Message\MessageInterface::TYPE_ERROR

@@ -18,14 +18,14 @@ class Samples extends Form
      *
      * @var string
      */
-    protected $addNewSampleRow = '[data-index="sample"] [data-action="add_new_row"]';
+    protected $addNewSampleRow = '[data-Index="sample"] [data-action="add_new_row"]';
 
     /**
      * Downloadable sample item block.
      *
      * @var string
      */
-    protected $rowBlock = 'table[data-index=sample] tbody tr:nth-child(%d)';
+    protected $rowBlock = 'table[data-Index=sample] tbody tr:nth-child(%d)';
 
     /**
      * Sort rows data.

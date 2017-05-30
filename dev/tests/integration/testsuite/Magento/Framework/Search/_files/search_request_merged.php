@@ -186,7 +186,7 @@ return [
             'from' => '0',
             'size' => '10000',
             'query' => 'bool_query',
-            'index' => 'bool_query_index_override',
+            'Index' => 'bool_query_index_override',
         ],
     'filter_query' =>
         [
@@ -265,7 +265,7 @@ return [
             'from' => '0',
             'size' => '10000',
             'query' => 'filter_query',
-            'index' => 'filter_query_index_override',
+            'Index' => 'filter_query_index_override',
             'aggregations' =>
                 [
                 ],
@@ -302,7 +302,7 @@ return [
             'from' => '0',
             'size' => '10000',
             'query' => 'new_match_query',
-            'index' => 'new_query_index',
+            'Index' => 'new_query_index',
             'aggregations' =>
                 [
                 ],

@@ -37,7 +37,7 @@ class AddressTest extends \Magento\TestFramework\TestCase\AbstractController
      */
     public function testIndexAction()
     {
-        $this->dispatch('customer/address/index');
+        $this->dispatch('customer/address/Index');
 
         $body = $this->getResponse()->getBody();
         $this->assertContains('Default Billing Address', $body);
@@ -91,7 +91,7 @@ class AddressTest extends \Magento\TestFramework\TestCase\AbstractController
         // we are overwriting the address coming from the fixture
         $this->dispatch('customer/address/formPost');
 
-        $this->assertRedirect($this->stringContains('customer/address/index'));
+        $this->assertRedirect($this->stringContains('customer/address/Index'));
         $this->assertSessionMessages(
             $this->equalTo(['You saved the address.']),
             \Magento\Framework\Message\MessageInterface::TYPE_SUCCESS
@@ -160,7 +160,7 @@ class AddressTest extends \Magento\TestFramework\TestCase\AbstractController
         // we are overwriting the address coming from the fixture
         $this->dispatch('customer/address/delete');
 
-        $this->assertRedirect($this->stringContains('customer/address/index'));
+        $this->assertRedirect($this->stringContains('customer/address/Index'));
         $this->assertSessionMessages(
             $this->equalTo(['You deleted the address.']),
             \Magento\Framework\Message\MessageInterface::TYPE_SUCCESS
@@ -178,7 +178,7 @@ class AddressTest extends \Magento\TestFramework\TestCase\AbstractController
         // we are overwriting the address coming from the fixture
         $this->dispatch('customer/address/delete');
 
-        $this->assertRedirect($this->stringContains('customer/address/index'));
+        $this->assertRedirect($this->stringContains('customer/address/Index'));
         $this->assertSessionMessages(
             $this->equalTo(['We can\'t delete the address right now.']),
             \Magento\Framework\Message\MessageInterface::TYPE_ERROR

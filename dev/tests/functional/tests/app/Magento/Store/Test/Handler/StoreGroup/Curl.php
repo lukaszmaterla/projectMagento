@@ -50,7 +50,7 @@ class Curl extends AbstractCurl implements StoreGroupInterface
     protected function getStoreGroupIdByGroupName($storeName)
     {
         //Set pager limit to 2000 in order to find created store group by name
-        $url = $_ENV['app_backend_url'] . 'admin/system_store/index/sort/group_title/dir/asc/limit/2000';
+        $url = $_ENV['app_backend_url'] . 'admin/system_store/Index/sort/group_title/dir/asc/limit/2000';
         $curl = new BackendDecorator(new CurlTransport(), $this->_configuration);
         $curl->addOption(CURLOPT_HEADER, 1);
         $curl->write($url, [], CurlInterface::GET);

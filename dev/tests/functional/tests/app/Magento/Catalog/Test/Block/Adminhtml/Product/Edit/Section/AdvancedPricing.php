@@ -28,7 +28,7 @@ class AdvancedPricing extends Section
      *
      * @var string
      */
-    protected $tierPrice = 'div[data-index="tier_price"]';
+    protected $tierPrice = 'div[data-Index="tier_price"]';
 
     /**
      * Selector for "Done" button.
@@ -52,7 +52,7 @@ class AdvancedPricing extends Section
         if (isset($fields['tier_price'])) {
             /** @var AbstractOptions $optionsForm */
             $optionsForm = $this->getTierPriceForm($context);
-            $optionsForm->fillOptions($fields['tier_price'], $context->find('div[data-index="tier_price"]'));
+            $optionsForm->fillOptions($fields['tier_price'], $context->find('div[data-Index="tier_price"]'));
             unset($fields['tier_price']);
         }
         $data = $this->dataMapping($fields);
@@ -79,7 +79,7 @@ class AdvancedPricing extends Section
             $optionsForm = $this->getTierPriceForm($context);
             $formData['tier_price'] = $optionsForm->getDataOptions(
                 $fields['tier_price'],
-                $context->find('div[data-index="tier_price"]')
+                $context->find('div[data-Index="tier_price"]')
             );
             unset($fields['tier_price']);
         }

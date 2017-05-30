@@ -11,7 +11,7 @@ use Magento\Mtf\Constraint\AbstractConstraint;
 
 /**
  * Class AssertOrderOnHoldFailMessage
- * Assert on hold fail message is displayed on order index page
+ * Assert on hold fail message is displayed on order Index page
  */
 class AssertOrderOnHoldFailMessage extends AbstractConstraint
 {
@@ -21,7 +21,7 @@ class AssertOrderOnHoldFailMessage extends AbstractConstraint
     const FAIL_ON_HOLD_MESSAGE = 'No order(s) were put on hold.';
 
     /**
-     * Assert on hold fail message is displayed on order index page
+     * Assert on hold fail message is displayed on order Index page
      *
      * @param OrderIndex $orderIndex
      * @return void
@@ -41,6 +41,6 @@ class AssertOrderOnHoldFailMessage extends AbstractConstraint
      */
     public function toString()
     {
-        return 'On hold fail message is displayed on order index page.';
+        return 'On hold fail message is displayed on order Index page.';
     }
 }

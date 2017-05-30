@@ -23,14 +23,14 @@ class Bundle extends Section
      *
      * @var string
      */
-    protected $addNewOption = 'button[data-index="add_button"]';
+    protected $addNewOption = 'button[data-Index="add_button"]';
 
     /**
      * Bundle options locator.
      *
      * @var string
      */
-    protected $bundleOptions = './/*[@data-index="bundle_options"]/tbody';
+    protected $bundleOptions = './/*[@data-Index="bundle_options"]/tbody';
 
     /**
      * Open option section.

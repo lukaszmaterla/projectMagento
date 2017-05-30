@@ -18,7 +18,7 @@ use Magento\Mtf\Client\Locator;
 class Config extends Section
 {
     /** @var string */
-    protected $createConfigurationsButton = '[data-index="create_configurable_products_button"] > span';
+    protected $createConfigurationsButton = '[data-Index="create_configurable_products_button"] > span';
 
     /**
      * Selector for trigger show/hide "Variations" tab.
@@ -46,7 +46,7 @@ class Config extends Section
      *
      * @var string
      */
-    protected $variationsMatrix = 'div[data-index="configurable-matrix"]';
+    protected $variationsMatrix = 'div[data-Index="configurable-matrix"]';
 
     /**
      * Selector for template block.
@@ -67,7 +67,7 @@ class Config extends Section
      *
      * @var string
      */
-    private $configurationsSection = '[data-index="configurable"]';
+    private $configurationsSection = '[data-Index="configurable"]';
 
     /**
      * Fill variations fieldset.

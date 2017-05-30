@@ -40,7 +40,7 @@ class DeleteTest extends \PHPUnit_Framework_TestCase
         $this->assertContains('title="Remove"', $buttonHtml);
         $this->assertContains(
             'onclick="this.setAttribute(\'data-url\', '
-            . '\'http://localhost/index.php/backend/admin/integration/delete/id/'
+            . '\'http://localhost/Index.php/backend/admin/integration/delete/id/'
             . $integration->getId(),
             $buttonHtml
         );
@@ -55,7 +55,7 @@ class DeleteTest extends \PHPUnit_Framework_TestCase
         $this->assertContains('title="Uninstall the extension to remove this integration"', $buttonHtml);
         $this->assertContains(
             'onclick="this.setAttribute(\'data-url\', '
-            . '\'http://localhost/index.php/backend/admin/integration/delete/id/'
+            . '\'http://localhost/Index.php/backend/admin/integration/delete/id/'
             . $integration->getId(),
             $buttonHtml
         );

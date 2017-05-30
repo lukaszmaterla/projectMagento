@@ -96,7 +96,7 @@ class Curl extends AbstractCurl implements RatingInterface
      */
     protected function getProductRatingId()
     {
-        $url = 'review/rating/index/sort/rating_id/dir/desc/';
+        $url = 'review/rating/Index/sort/rating_id/dir/desc/';
         $regex = '/data-column="rating_id"[^>]*>\s*([0-9]+)\s*</';
         $extractor = new Extractor($url, $regex);
         $match = $extractor->getData();

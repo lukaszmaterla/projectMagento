@@ -26,7 +26,7 @@ class StatusCheckTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->indexScript = UPDATER_BP . '/index.php';
+        $this->indexScript = UPDATER_BP . '/Index.php';
         $this->status = new \Magento\Update\Status();
         $this->status->clear();
         $this->uniqueMessage = 'Test Message' . uniqid();
@@ -88,7 +88,7 @@ class StatusCheckTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Return response of index.php, according to the request type
+     * Return response of Index.php, according to the request type
      *
      * @param string|null $requestType
      * @return string

@@ -79,7 +79,7 @@ class TemplateTest extends \PHPUnit_Framework_TestCase
 
     public function testGetBaseUrl()
     {
-        $this->assertEquals('http://localhost/index.php/', $this->_block->getBaseUrl());
+        $this->assertEquals('http://localhost/Index.php/', $this->_block->getBaseUrl());
     }
 
     public function testGetObjectData()

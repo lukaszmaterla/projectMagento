@@ -17,7 +17,7 @@ class ResetPasswordTest extends \Magento\TestFramework\TestCase\AbstractBackendC
      *
      * @var string
      */
-    protected $baseControllerUrl = 'http://localhost/index.php/backend/customer/index/';
+    protected $baseControllerUrl = 'http://localhost/Index.php/backend/customer/Index/';
 
     /**
      * Checks reset password functionality with default settings and customer reset request event.
@@ -32,7 +32,7 @@ class ResetPasswordTest extends \Magento\TestFramework\TestCase\AbstractBackendC
             \Magento\Security\Model\PasswordResetRequestEvent::CUSTOMER_PASSWORD_RESET_REQUEST
         );
         $this->getRequest()->setPostValue(['customer_id' => '1']);
-        $this->dispatch('backend/customer/index/resetPassword');
+        $this->dispatch('backend/customer/Index/resetPassword');
         $this->assertSessionMessages(
             $this->equalTo(['The customer will receive an email with a link to reset password.']),
             \Magento\Framework\Message\MessageInterface::TYPE_SUCCESS
@@ -57,7 +57,7 @@ class ResetPasswordTest extends \Magento\TestFramework\TestCase\AbstractBackendC
             \Magento\Security\Model\PasswordResetRequestEvent::ADMIN_PASSWORD_RESET_REQUEST
         );
         $this->getRequest()->setPostValue(['customer_id' => '1']);
-        $this->dispatch('backend/customer/index/resetPassword');
+        $this->dispatch('backend/customer/Index/resetPassword');
         $this->assertSessionMessages(
             $this->equalTo(
                 ['Too many password reset requests. Please wait and try again or contact hello@example.com.']

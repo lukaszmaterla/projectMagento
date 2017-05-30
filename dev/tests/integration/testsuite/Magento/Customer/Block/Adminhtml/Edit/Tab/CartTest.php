@@ -65,7 +65,7 @@ class CartTest extends \PHPUnit_Framework_TestCase
 
     public function testGetGridUrl()
     {
-        $this->assertContains('/backend/customer/index/cart', $this->_block->getGridUrl());
+        $this->assertContains('/backend/customer/Index/cart', $this->_block->getGridUrl());
     }
 
     public function testGetGridParentHtml()

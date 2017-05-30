@@ -58,9 +58,9 @@ class CompareTest extends \Magento\TestFramework\TestCase\AbstractController
     {
         $this->_requireVisitorWithNoProducts();
         $product = $this->productRepository->get('simple_product_2');
-        $this->dispatch('catalog/product_compare/index/items/' . $product->getEntityId());
+        $this->dispatch('catalog/product_compare/Index/items/' . $product->getEntityId());
 
-        $this->assertRedirect($this->equalTo('http://localhost/index.php/catalog/product_compare/index/'));
+        $this->assertRedirect($this->equalTo('http://localhost/Index.php/catalog/product_compare/Index/'));
 
         $this->_assertCompareListEquals([$product->getEntityId()]);
     }
@@ -105,7 +105,7 @@ class CompareTest extends \Magento\TestFramework\TestCase\AbstractController
         $layout = $this->_objectManager->get('Magento\Framework\View\LayoutInterface');
         $layout->setIsCacheable(false);
 
-        $this->dispatch('catalog/product_compare/index');
+        $this->dispatch('catalog/product_compare/Index');
 
         $responseBody = $this->getResponse()->getBody();
 

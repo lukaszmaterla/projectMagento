@@ -57,7 +57,7 @@ class ViewedProductsReportEntityTest extends Injectable
     protected $browser;
 
     /**
-     * Catalog product index page
+     * Catalog product Index page
      *
      * @var CatalogProductIndex
      */

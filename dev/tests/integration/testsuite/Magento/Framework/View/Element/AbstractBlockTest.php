@@ -468,7 +468,7 @@ class AbstractBlockTest extends \PHPUnit_Framework_TestCase
 
     public function testGetUrl()
     {
-        $base = 'http://localhost/index.php/';
+        $base = 'http://localhost/Index.php/';
         $withRoute = "{$base}catalog/product/view/id/10/";
         $this->assertEquals($base, $this->_block->getUrl());
         $this->assertEquals($withRoute, $this->_block->getUrl('catalog/product/view', ['id' => 10]));

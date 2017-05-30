@@ -56,7 +56,7 @@ class EnvironmentTest extends \PHPUnit_Framework_TestCase
         $serverVars = $_SERVER;
         $this->assertNotEmpty($serverVars);
 
-        $expectedResult = ['HTTP_HOST' => 'localhost', 'SCRIPT_FILENAME' => 'index.php'];
+        $expectedResult = ['HTTP_HOST' => 'localhost', 'SCRIPT_FILENAME' => 'Index.php'];
         $actualResult = ['HTTP_HOST' => '127.0.0.1'];
         $this->_object->emulateHttpRequest($actualResult);
         $this->assertEquals($expectedResult, $actualResult);

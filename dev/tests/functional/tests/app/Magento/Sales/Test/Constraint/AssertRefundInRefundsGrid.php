@@ -41,7 +41,7 @@ class AssertRefundInRefundsGrid extends AbstractConstraint
             $filter['grand_total_to'] = number_format($amount[$key]['grand_creditmemo_total'], 2);
             \PHPUnit_Framework_Assert::assertTrue(
                 $creditMemoIndex->getCreditMemoGrid()->isRowVisible($filter, false, false),
-                "Credit memo '#$creditMemoId' is absent in credit memos grid on credit memo index page."
+                "Credit memo '#$creditMemoId' is absent in credit memos grid on credit memo Index page."
             );
         }
     }
@@ -53,6 +53,6 @@ class AssertRefundInRefundsGrid extends AbstractConstraint
      */
     public function toString()
     {
-        return 'Credit memo is present in credit memos grid on credit memo index page.';
+        return 'Credit memo is present in credit memos grid on credit memo Index page.';
     }
 }

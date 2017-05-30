@@ -289,7 +289,7 @@
      * Invokes the `iterator` function once for each item in `obj` collection, which can be either an
      * object or an array. The `iterator` function is invoked with `iterator(value, key)`, where `value`
      * is the value of an object property or an array element and `key` is the object property key or
-     * array element index. Specifying a `context` for the function is optional.
+     * array element Index. Specifying a `context` for the function is optional.
      *
      * It is worth noting that `.forEach` does not iterate over inherited properties because it filters
      * using the `hasOwnProperty` method.
@@ -11553,7 +11553,7 @@
          *
          * @param {Array.<Promise>|Object.<Promise>} promises An array or hash of promises.
          * @returns {Promise} Returns a single promise that will be resolved with an array/hash of values,
-         *   each value corresponding to the promise at the same index/key in the `promises` array/hash.
+         *   each value corresponding to the promise at the same Index/key in the `promises` array/hash.
          *   If any of the promises is resolved with a rejection, this resulting promise will be rejected
          *   with the same rejection value.
          */
@@ -19939,7 +19939,7 @@
                 if (trackByExp) {
                     trackByExpGetter = $parse(trackByExp);
                     trackByIdExpFn = function(key, value, index) {
-                        // assign key, value, and $index to the locals so that they can be used in hash functions
+                        // assign key, value, and $Index to the locals so that they can be used in hash functions
                         if (keyIdentifier) hashFnLocals[keyIdentifier] = key;
                         hashFnLocals[valueIdentifier] = value;
                         hashFnLocals.$index = index;
@@ -19966,7 +19966,7 @@
                 // iterator, and the value is objects with following properties.
                 //   - scope: bound scope
                 //   - element: previous element.
-                //   - index: position
+                //   - Index: position
                 var lastBlockMap = {};
 
                 //watch props
@@ -21282,7 +21282,7 @@
                             // doing displayFn(scope, locals) || '' overwrites zero values
                             label = isDefined(label) ? label : '';
                             optionGroup.push({
-                                // either the index into array or key from object
+                                // either the Index into array or key from object
                                 id: trackFn ? trackFn(scope, locals) : (keyName ? keys[index] : index),
                                 label: label,
                                 selected: selected                   // determine if we should be selected

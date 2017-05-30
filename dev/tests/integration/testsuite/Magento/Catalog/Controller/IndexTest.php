@@ -13,7 +13,7 @@ class IndexTest extends \Magento\TestFramework\TestCase\AbstractController
 {
     public function testIndexAction()
     {
-        $this->dispatch('catalog/index');
+        $this->dispatch('catalog/Index');
 
         $this->assertRedirect();
     }

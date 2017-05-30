@@ -11,7 +11,7 @@ use Magento\Mtf\Constraint\AbstractConstraint;
 
 /**
  * Class AssertOrderCancelMassActionSuccessMessage
- * Assert cancel success message is displayed on order index page
+ * Assert cancel success message is displayed on order Index page
  */
 class AssertOrderCancelMassActionSuccessMessage extends AbstractConstraint
 {
@@ -21,7 +21,7 @@ class AssertOrderCancelMassActionSuccessMessage extends AbstractConstraint
     const SUCCESS_CANCEL_MESSAGE = 'We canceled %d order(s).';
 
     /**
-     * Assert cancel success message is displayed on order index page
+     * Assert cancel success message is displayed on order Index page
      *
      * @param OrderIndex $orderIndex
      * @param int $ordersCount
@@ -42,6 +42,6 @@ class AssertOrderCancelMassActionSuccessMessage extends AbstractConstraint
      */
     public function toString()
     {
-        return 'Cancel success message is displayed on order index page.';
+        return 'Cancel success message is displayed on order Index page.';
     }
 }

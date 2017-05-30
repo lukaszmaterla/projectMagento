@@ -22,14 +22,14 @@ class AffectedAttributeSet extends ParentForm
      *
      * @var string
      */
-    protected $confirmButton = '[data-index="confirm_button"]';
+    protected $confirmButton = '[data-Index="confirm_button"]';
 
     /**
      * Add configurable attributes to the New Attribute Set.
      *
      * @var string
      */
-    protected $affectedAttributeSetNew = 'input[data-index="affectedAttributeSetNew"]';
+    protected $affectedAttributeSetNew = 'input[data-Index="affectedAttributeSetNew"]';
 
     /**
      * Fill popup form.

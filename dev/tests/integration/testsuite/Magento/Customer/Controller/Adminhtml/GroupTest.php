@@ -16,7 +16,7 @@ class GroupTest extends \Magento\TestFramework\TestCase\AbstractBackendControlle
     const TAX_CLASS_ID = 3;
     const TAX_CLASS_NAME = 'Retail Customer';
     const CUSTOMER_GROUP_CODE = 'custom_group';
-    const BASE_CONTROLLER_URL = 'http://localhost/index.php/backend/customer/group/';
+    const BASE_CONTROLLER_URL = 'http://localhost/Index.php/backend/customer/group/';
     const CUSTOMER_GROUP_ID = 2;
 
     /** @var  \Magento\Framework\Session\SessionManagerInterface */
@@ -100,7 +100,7 @@ class GroupTest extends \Magento\TestFramework\TestCase\AbstractBackendControlle
             $this->equalTo(['You deleted the customer group.']),
             MessageInterface::TYPE_SUCCESS
         );
-        $this->assertRedirect($this->stringStartsWith(self::BASE_CONTROLLER_URL . 'index'));
+        $this->assertRedirect($this->stringStartsWith(self::BASE_CONTROLLER_URL . 'Index'));
     }
 
     /**

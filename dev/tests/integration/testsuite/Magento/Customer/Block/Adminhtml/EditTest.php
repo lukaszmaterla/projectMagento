@@ -106,7 +106,7 @@ class EditTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetValidationUrl()
     {
-        $this->assertContains('customer/index/validate', $this->block->getValidationUrl());
+        $this->assertContains('customer/Index/validate', $this->block->getValidationUrl());
     }
 
     /**

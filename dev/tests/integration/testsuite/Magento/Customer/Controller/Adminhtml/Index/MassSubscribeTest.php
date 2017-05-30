@@ -18,7 +18,7 @@ class MassSubscribeTest extends \Magento\TestFramework\TestCase\AbstractBackendC
      *
      * @var string
      */
-    protected $baseControllerUrl = 'http://localhost/index.php/backend/customer/index/index';
+    protected $baseControllerUrl = 'http://localhost/Index.php/backend/customer/Index/Index';
 
     protected function tearDown()
     {
@@ -47,7 +47,7 @@ class MassSubscribeTest extends \Magento\TestFramework\TestCase\AbstractBackendC
         $this->getRequest()->setPostValue('selected', [1, 2])->setPostValue('namespace', 'customer_listing');
 
         // Test
-        $this->dispatch('backend/customer/index/massSubscribe');
+        $this->dispatch('backend/customer/Index/massSubscribe');
 
         // Assertions
         $this->assertRedirect($this->stringStartsWith($this->baseControllerUrl));
@@ -71,7 +71,7 @@ class MassSubscribeTest extends \Magento\TestFramework\TestCase\AbstractBackendC
     public function testMassSubscriberActionNoSelection()
     {
         $this->getRequest()->setPostValue('namespace', 'customer_listing');
-        $this->dispatch('backend/customer/index/massSubscribe');
+        $this->dispatch('backend/customer/Index/massSubscribe');
 
         $this->assertRedirect($this->stringStartsWith($this->baseControllerUrl));
         $this->assertSessionMessages(

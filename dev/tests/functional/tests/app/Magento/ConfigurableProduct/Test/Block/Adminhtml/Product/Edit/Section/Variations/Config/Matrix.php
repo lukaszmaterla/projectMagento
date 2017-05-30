@@ -24,23 +24,23 @@ class Matrix extends Form
      */
     protected $mappingGetFields = [
         'name' => [
-            'selector' => 'td[data-index="name_container"] a',
+            'selector' => 'td[data-Index="name_container"] a',
             'strategy' => Locator::SELECTOR_CSS,
         ],
         'sku' => [
-            'selector' => 'td[data-index="sku_container"] span[data-index="sku_text"]',
+            'selector' => 'td[data-Index="sku_container"] span[data-Index="sku_text"]',
             'strategy' => Locator::SELECTOR_CSS,
         ],
         'price' => [
-            'selector' => 'td[data-index="price_container"] span[data-index="price_text"]',
+            'selector' => 'td[data-Index="price_container"] span[data-Index="price_text"]',
             'strategy' => Locator::SELECTOR_CSS,
         ],
         'qty' => [
-            'selector' => 'td[data-index="quantity_container"] span[data-index="quantity_text"]',
+            'selector' => 'td[data-Index="quantity_container"] span[data-Index="quantity_text"]',
             'strategy' => Locator::SELECTOR_CSS,
         ],
         'weight' => [
-            'selector' => 'td[data-index="price_weight"] span[data-index="weight_text"]',
+            'selector' => 'td[data-Index="price_weight"] span[data-Index="weight_text"]',
             'strategy' => Locator::SELECTOR_CSS,
         ],
     ];

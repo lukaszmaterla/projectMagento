@@ -35,6 +35,6 @@ class UrlRewriteTest extends \Magento\TestFramework\TestCase\AbstractBackendCont
             $this->contains('The URL Rewrite has been saved.'),
             \Magento\Framework\Message\MessageInterface::TYPE_SUCCESS
         );
-        $this->assertRedirect($this->stringContains('backend/admin/url_rewrite/index'));
+        $this->assertRedirect($this->stringContains('backend/admin/url_rewrite/Index'));
     }
 }

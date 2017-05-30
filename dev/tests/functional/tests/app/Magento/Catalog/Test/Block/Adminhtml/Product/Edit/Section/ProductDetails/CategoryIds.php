@@ -44,7 +44,7 @@ class CategoryIds extends MultisuggestElement
      *
      * @var string
      */
-    protected $advancedInventoryButton = '[data-index="advanced_inventory_button"]';
+    protected $advancedInventoryButton = '[data-Index="advanced_inventory_button"]';
 
     /**
      * @constructor

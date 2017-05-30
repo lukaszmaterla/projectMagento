@@ -32,21 +32,21 @@ class Options extends Section
      *
      * @var string
      */
-    protected $newCustomOptionRow = './/*[@data-index="options"]/tbody/tr[%d]';
+    protected $newCustomOptionRow = './/*[@data-Index="options"]/tbody/tr[%d]';
 
     /**
      * Add an option button.
      *
      * @var string
      */
-    protected $buttonAddOption = '[data-index="button_add"]';
+    protected $buttonAddOption = '[data-Index="button_add"]';
 
     /**
      * Import an option button.
      *
      * @var string
      */
-    protected $buttonImportOptions = '[data-index="button_import"]';
+    protected $buttonImportOptions = '[data-Index="button_import"]';
 
     /**
      * Import products grid.
@@ -67,14 +67,14 @@ class Options extends Section
      *
      * @var string
      */
-    protected $dynamicDataRow = '[data-index="values"] tbody tr:nth-child(%d)';
+    protected $dynamicDataRow = '[data-Index="values"] tbody tr:nth-child(%d)';
 
     /**
      * Locator for static data row.
      *
      * @var string
      */
-    protected $staticDataRow = '[data-index="container_type_static"] div:nth-child(%d)';
+    protected $staticDataRow = '[data-Index="container_type_static"] div:nth-child(%d)';
 
     /**
      * Sort rows data.

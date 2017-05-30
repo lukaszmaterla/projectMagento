@@ -59,7 +59,7 @@ class Curl extends AbstractCurl implements CustomerGroupInterface
      */
     public function getCustomerGroupId(array $data)
     {
-        $url = 'customer/group/index/sort/time/dir/desc';
+        $url = 'customer/group/Index/sort/time/dir/desc';
         $regExp = '/.*id\/(\d+)\/.*' . $data['code'] . '/siu';
         $extractor = new Extractor($url, $regExp);
         $match = $extractor->getData();

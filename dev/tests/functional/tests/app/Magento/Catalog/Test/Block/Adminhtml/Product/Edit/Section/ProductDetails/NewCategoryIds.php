@@ -19,7 +19,7 @@ class NewCategoryIds extends Form
      *
      * @var string
      */
-    protected $buttonNewCategory = '[data-index="create_category_button"]';
+    protected $buttonNewCategory = '[data-Index="create_category_button"]';
 
     /**
      * Modal slide "New Category".

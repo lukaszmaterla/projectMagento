@@ -1,0 +1,8 @@
+"Type in Your name","Wpisz swoje imię"
+"Greet","Powitaj"
+"Hello message","Wiadomość powitania"
+"This will be shown when no name were provided","Ta wiadomość pokaże się gdy nie zostanie wpisane imię"
+"Can as about name","Czy może pytać o imię"
+"If enabled will show prompt for customer to enter his name.","Jeżeli opcja będzie włączona pojawi się formularz z pytaniem o imię."
+"Hello message with name","Wiadomość z imieniem"
+"This will be shown when customer provided his name. Type {name} in place where customer name should be placed.","Ta wiadomość pojawi się klientowi który podał swoje imię. Wpisz {name} w miejscu gdzie ma być umieszczone imię klienta."

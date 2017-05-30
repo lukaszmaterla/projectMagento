@@ -39,7 +39,7 @@ class Section extends AbstractContainer
      *
      * @var string
      */
-    protected $section = '[data-index="%s"]';
+    protected $section = '[data-Index="%s"]';
 
     /**
      * Get array of label => validation error text.

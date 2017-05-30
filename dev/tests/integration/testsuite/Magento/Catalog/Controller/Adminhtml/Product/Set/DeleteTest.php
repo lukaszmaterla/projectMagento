@@ -24,7 +24,7 @@ class DeleteTest extends \Magento\TestFramework\TestCase\AbstractBackendControll
             $this->equalTo(['The attribute set has been removed.']),
             MessageInterface::TYPE_SUCCESS
         );
-        $this->assertRedirect($this->stringContains('catalog/product_set/index/'));
+        $this->assertRedirect($this->stringContains('catalog/product_set/Index/'));
     }
 
     /**

@@ -32,11 +32,11 @@ class GridTest extends \PHPUnit_Framework_TestCase
             );
         }
 
-        $this->assertStringStartsWith('http://localhost/index.php', $gridBlock->getGridUrl(), 'Grid URL is invalid');
+        $this->assertStringStartsWith('http://localhost/Index.php', $gridBlock->getGridUrl(), 'Grid URL is invalid');
 
         $row = new \Magento\Framework\DataObject(['id' => 1]);
         $this->assertStringStartsWith(
-            'http://localhost/index.php/backend/admin/index/edit/product/1',
+            'http://localhost/Index.php/backend/admin/Index/edit/product/1',
             $gridBlock->getRowUrl($row),
             'Grid row URL is invalid'
         );

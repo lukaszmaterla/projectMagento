@@ -30,14 +30,14 @@ class CompareTest extends \PHPUnit_Framework_TestCase
     {
         /** @var $empty \Magento\Catalog\Helper\Product\Compare */
         $empty = $this->_objectManager->create('Magento\Catalog\Helper\Product\Compare');
-        $this->assertContains('/catalog/product_compare/index/', $empty->getListUrl());
+        $this->assertContains('/catalog/product_compare/Index/', $empty->getListUrl());
 
         $this->_populateCompareList();
         $productRepository = $this->_objectManager->create('Magento\Catalog\Api\ProductRepositoryInterface');
         $id1 = $productRepository->get('simple1')->getId();
         $id2 = $productRepository->get('simple2')->getId();
         $this->assertRegExp(
-            '#/catalog/product_compare/index/items/(?:' . $id1 . ',' . $id2 . '|' . $id2 . ',' . $id1. ')/#',
+            '#/catalog/product_compare/Index/items/(?:' . $id1 . ',' . $id2 . '|' . $id2 . ',' . $id1. ')/#',
             $this->_helper->getListUrl()
         );
     }
@@ -60,7 +60,7 @@ class CompareTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('10', $data['product']);
         $this->assertArrayHasKey('uenc', $data);
         $this->assertStringEndsWith(
-            'wishlist/index/add/',
+            'wishlist/Index/add/',
             $params['action']
         );
     }

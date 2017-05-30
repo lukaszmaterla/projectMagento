@@ -56,8 +56,8 @@ class LayoutTest extends \PHPUnit_Framework_TestCase
             'adminhtml.permissions.user.edit.tab.roles.js',
         ],
         'adminhtml_user_role_index' => [
-            'adminhtml.permission.role.index',
-            'adminhtml.permissions.role.index',
+            'adminhtml.permission.role.Index',
+            'adminhtml.permissions.role.Index',
             'adminhtml.permissions.role.grid',
         ],
         'adminhtml_user_role_rolegrid' => ['adminhtml.permission.role.grid', 'adminhtml.permissions.role.grid'],
@@ -74,7 +74,7 @@ class LayoutTest extends \PHPUnit_Framework_TestCase
             'adminhtml.permission.role.grid.user',
             'adminhtml.permissions.role.grid.user',
         ],
-        'adminhtml_user_index' => ['adminhtml.permission.user.index', 'adminhtml.permissions.user.index'],
+        'adminhtml_user_index' => ['adminhtml.permission.user.Index', 'adminhtml.permissions.user.Index'],
         'adminhtml_user_rolegrid' => [
             'adminhtml.permissions.user.rolegrid',
             'adminhtml.permission.user.rolegrid',

@@ -23,14 +23,14 @@ class Downloadable extends Section
      *
      * @var string
      */
-    protected $addNewRow = '[data-index="link"] [data-action="add_new_row"]';
+    protected $addNewRow = '[data-Index="link"] [data-action="add_new_row"]';
 
     /**
      * Downloadable block.
      *
      * @var string
      */
-    protected $downloadableBlock = '[data-index="container_%s"]';
+    protected $downloadableBlock = '[data-Index="container_%s"]';
 
     /**
      * Locator for is downloadable product checkbox.

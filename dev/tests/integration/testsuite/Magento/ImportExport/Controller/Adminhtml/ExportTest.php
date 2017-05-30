@@ -76,11 +76,11 @@ class ExportTest extends \Magento\TestFramework\TestCase\AbstractBackendControll
     }
 
     /**
-     * Test index action
+     * Test Index action
      */
     public function testIndexAction()
     {
-        $this->dispatch('backend/admin/export/index');
+        $this->dispatch('backend/admin/export/Index');
 
         $body = $this->getResponse()->getBody();
         $this->assertSelectCount('fieldset#base_fieldset', 1, $body);

@@ -6,7 +6,7 @@
 namespace Magento\Contact\Controller;
 
 /**
- * Contact index controller test
+ * Contact Index controller test
  */
 class IndexTest extends \Magento\TestFramework\TestCase\AbstractController
 {
@@ -20,7 +20,7 @@ class IndexTest extends \Magento\TestFramework\TestCase\AbstractController
         ];
         $this->getRequest()->setPostValue($params);
 
-        $this->dispatch('contact/index/post');
+        $this->dispatch('contact/Index/post');
         $this->assertSessionMessages(
             $this->contains(
                 "Thanks for contacting us with your comments and questions. We'll respond to you very soon."

@@ -27,14 +27,14 @@ class Option extends Form
      *
      * @var string
      */
-    protected $selectionBlock = '[data-index="bundle_selections"] > tbody > tr:nth-child(%d)';
+    protected $selectionBlock = '[data-Index="bundle_selections"] > tbody > tr:nth-child(%d)';
 
     /**
      * Selector for 'Add Products to Option' button.
      *
      * @var string
      */
-    protected $addProducts = 'button[data-index="modal_set"]';
+    protected $addProducts = 'button[data-Index="modal_set"]';
 
     /**
      * Remove selection button selector.

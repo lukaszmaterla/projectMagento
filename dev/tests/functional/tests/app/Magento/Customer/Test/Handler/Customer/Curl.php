@@ -121,7 +121,7 @@ class Curl extends AbstractCurl implements CustomerInterface
      */
     protected function getCustomerId($email)
     {
-        $url = $_ENV['app_backend_url'] . 'mui/index/render/';
+        $url = $_ENV['app_backend_url'] . 'mui/Index/render/';
         $data = [
             'namespace' => 'customer_listing',
             'filters' => [
@@ -184,7 +184,7 @@ class Curl extends AbstractCurl implements CustomerInterface
             $curlData = $this->prepareAddressData($curlData);
         }
 
-        $url = $_ENV['app_backend_url'] . 'customer/index/save/id/' . $curlData['customer']['entity_id'];
+        $url = $_ENV['app_backend_url'] . 'customer/Index/save/id/' . $curlData['customer']['entity_id'];
         $curl = new BackendDecorator(new CurlTransport(), $this->_configuration);
         $curl->write($url, $curlData);
         $response = $curl->read();

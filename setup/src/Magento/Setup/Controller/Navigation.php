@@ -88,7 +88,7 @@ class Navigation extends AbstractActionController
     {
         if ($this->navigation->getType() === NavModel::NAV_UPDATER) {
             if ($this->status->isUpdateError() || $this->status->isUpdateInProgress()) {
-                $this->view->setVariable('redirect', '../' . Environment::UPDATER_DIR . '/index.php');
+                $this->view->setVariable('redirect', '../' . Environment::UPDATER_DIR . '/Index.php');
             }
         }
         $this->view->setTemplate('/magento/setup/navigation/header-bar.phtml');

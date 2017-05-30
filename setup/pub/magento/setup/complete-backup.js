@@ -74,7 +74,7 @@ angular.module('complete-backup', ['ngStorage'])
                 }
             },
             'store-maintenance': {
-                url:'index.php/maintenance/index',
+                url:'index.php/maintenance/Index',
                 show: function() {
                     $scope.startProgress();
                     $scope.maintenance.visible = true;
@@ -121,7 +121,7 @@ angular.module('complete-backup', ['ngStorage'])
         };
 
         $scope.disableMeintenanceMode = function() {
-            $http.post('index.php/maintenance/index', {'disable' : true}).success(function(data) {
+            $http.post('index.php/maintenance/Index', {'disable' : true}).success(function(data) {
             });
         };
         

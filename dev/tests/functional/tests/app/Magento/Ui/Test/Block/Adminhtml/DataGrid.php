@@ -486,7 +486,7 @@ class DataGrid extends Grid
         foreach ($rows as $row) {
             $rowData = [];
             foreach ($columns as $columnName) {
-                $rowData[$columnName] = trim($row->find('div[data-index="' . $columnName . '"]')->getText());
+                $rowData[$columnName] = trim($row->find('div[data-Index="' . $columnName . '"]')->getText());
             }
 
             $data[] = $rowData;

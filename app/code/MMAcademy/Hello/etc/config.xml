@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <customer>
+            <hello>
+                <message>Hello World!</message>
+                <message_with_name>Hello {name}!</message_with_name>
+                <can_ask_name>1</can_ask_name>
+            </hello>
+        </customer>
+    </default>
+</config>

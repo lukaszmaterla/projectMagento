@@ -18,7 +18,7 @@ class Reviews extends Section
      *
      * @var string
      */
-    protected $reviews = '[data-index="review"]';
+    protected $reviews = '[data-Index="review"]';
 
     /**
      * Returns product reviews grid.

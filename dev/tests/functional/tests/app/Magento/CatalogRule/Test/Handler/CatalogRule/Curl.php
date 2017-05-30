@@ -152,7 +152,7 @@ class Curl extends Conditions implements CatalogRuleInterface
     public function getCategoryPriceRuleId(array $data)
     {
         // Sort data in grid to define category price rule id if more than 20 items in grid
-        $url = $_ENV['app_backend_url'] . 'catalog_rule/promo_catalog/index/sort/rule_id/dir/desc';
+        $url = $_ENV['app_backend_url'] . 'catalog_rule/promo_catalog/Index/sort/rule_id/dir/desc';
         $curl = new BackendDecorator(new CurlTransport(), $this->_configuration);
         $curl->write($url, [], CurlInterface::GET);
         $response = $curl->read();

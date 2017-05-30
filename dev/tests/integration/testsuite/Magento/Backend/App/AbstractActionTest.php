@@ -57,9 +57,9 @@ class AbstractActionTest extends \Magento\TestFramework\TestCase\AbstractBackend
         ];
 
         $this->getRequest()->setPostValue($postLogin);
-        $this->dispatch('backend/admin/system_account/index');
+        $this->dispatch('backend/admin/system_account/Index');
 
-        $expected = 'backend/admin/system_account/index';
+        $expected = 'backend/admin/system_account/Index';
         $this->assertRedirect($this->stringContains($expected));
     }
 

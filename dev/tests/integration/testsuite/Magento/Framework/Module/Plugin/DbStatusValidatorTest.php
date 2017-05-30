@@ -9,7 +9,7 @@ class DbStatusValidatorTest extends \Magento\TestFramework\TestCase\AbstractCont
 {
     public function testValidationUpToDateDb()
     {
-        $this->dispatch('index/index');
+        $this->dispatch('Index/Index');
     }
 
     /**
@@ -43,6 +43,6 @@ class DbStatusValidatorTest extends \Magento\TestFramework\TestCase\AbstractCont
         $cache->clean();
 
         /* This triggers plugin to be executed */
-        $this->dispatch('index/index');
+        $this->dispatch('Index/Index');
     }
 }

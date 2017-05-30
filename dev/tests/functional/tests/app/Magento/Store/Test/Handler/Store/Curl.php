@@ -91,7 +91,7 @@ class Curl extends AbstractCurl implements StoreInterface
     protected function getStoreId($name)
     {
         //Set pager limit to 2000 in order to find created store view by name
-        $url = $_ENV['app_backend_url'] . 'admin/system_store/index/sort/store_title/dir/asc/limit/2000';
+        $url = $_ENV['app_backend_url'] . 'admin/system_store/Index/sort/store_title/dir/asc/limit/2000';
         $curl = new BackendDecorator(new CurlTransport(), $this->_configuration);
         $curl->addOption(CURLOPT_HEADER, 1);
         $curl->write($url, [], CurlInterface::GET);

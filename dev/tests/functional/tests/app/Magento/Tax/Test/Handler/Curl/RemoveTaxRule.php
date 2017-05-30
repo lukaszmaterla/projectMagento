@@ -38,7 +38,7 @@ class RemoveTaxRule extends Curl
      */
     public function persist(FixtureInterface $fixture = null)
     {
-        $this->taxRuleGridUrl = $_ENV['app_backend_url'] . 'tax/rule/index/';
+        $this->taxRuleGridUrl = $_ENV['app_backend_url'] . 'tax/rule/Index/';
         $curl = $this->getCurl($this->taxRuleGridUrl);
         $response = $curl->read();
         $this->removeTaxRules($response);

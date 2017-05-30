@@ -74,12 +74,12 @@ class MassactionTest extends \PHPUnit_Framework_TestCase
         $javascript = $this->_block->getJavaScript();
 
         $expectedItemFirst = '#"option_id1":{"label":"Option One",' .
-            '"url":"http:\\\/\\\/localhost\\\/index\.php\\\/(?:key\\\/([\w\d]+)\\\/)?",' .
+            '"url":"http:\\\/\\\/localhost\\\/Index\.php\\\/(?:key\\\/([\w\d]+)\\\/)?",' .
             '"complete":"Test","id":"option_id1"}#';
         $this->assertRegExp($expectedItemFirst, $javascript);
 
         $expectedItemSecond = '#"option_id2":{"label":"Option Two",' .
-            '"url":"http:\\\/\\\/localhost\\\/index\.php\\\/(?:key\\\/([\w\d]+)\\\/)?",' .
+            '"url":"http:\\\/\\\/localhost\\\/Index\.php\\\/(?:key\\\/([\w\d]+)\\\/)?",' .
             '"confirm":"Are you sure\?","id":"option_id2"}#';
         $this->assertRegExp($expectedItemSecond, $javascript);
     }
@@ -93,7 +93,7 @@ class MassactionTest extends \PHPUnit_Framework_TestCase
             'block_name' => 'admin.test.grid.massaction.option3',
         ];
         $expected = '#"option_id3":{"id":"option_id3","label":"Option Three",' .
-            '"url":"http:\\\/\\\/localhost\\\/index\.php\\\/(?:key\\\/([\w\d]+)\\\/)?",' .
+            '"url":"http:\\\/\\\/localhost\\\/Index\.php\\\/(?:key\\\/([\w\d]+)\\\/)?",' .
             '"block_name":"admin.test.grid.massaction.option3"}#';
 
         $this->_block->addItem($input['id'], $input);
@@ -135,7 +135,7 @@ class MassactionTest extends \PHPUnit_Framework_TestCase
                 [
                     'id' => 'option_id1',
                     'label' => 'Option One',
-                    'url' => '#http:\/\/localhost\/index\.php\/(?:key\/([\w\d]+)\/)?#',
+                    'url' => '#http:\/\/localhost\/Index\.php\/(?:key\/([\w\d]+)\/)?#',
                     'selected' => false,
                     'blockname' => ''
                 ],
@@ -145,7 +145,7 @@ class MassactionTest extends \PHPUnit_Framework_TestCase
                 [
                     'id' => 'option_id2',
                     'label' => 'Option Two',
-                    'url' => '#http:\/\/localhost\/index\.php\/(?:key\/([\w\d]+)\/)?#',
+                    'url' => '#http:\/\/localhost\/Index\.php\/(?:key\/([\w\d]+)\/)?#',
                     'selected' => false,
                     'blockname' => ''
                 ]

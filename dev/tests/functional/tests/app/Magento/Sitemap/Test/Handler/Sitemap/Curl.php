@@ -59,7 +59,7 @@ class Curl extends AbstractCurl implements SitemapInterface
     protected function getSitemapId(array $data)
     {
         //Sort data in grid to define sitemap id if more than 20 items in grid
-        $url = 'admin/sitemap/index/sort/sitemap_id/dir/desc';
+        $url = 'admin/sitemap/Index/sort/sitemap_id/dir/desc';
         $pattern = '/col\-sitemap_id[\s\W]*(\d+).*?' . $data['sitemap_filename'] . '/siu';
         $extractor = new Extractor($url, $pattern);
         $match = $extractor->getData();

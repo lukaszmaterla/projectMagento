@@ -147,7 +147,7 @@ class InitParamListener implements ListenerAggregateInterface, FactoryInterface
                     /** @var \Zend\Http\Response $response */
                     $response = $event->getResponse();
                     $baseUrl = Http::getDistroBaseUrlPath($_SERVER);
-                    $response->getHeaders()->addHeaderLine('Location', $baseUrl . 'index.php/session/unlogin');
+                    $response->getHeaders()->addHeaderLine('Location', $baseUrl . 'Index.php/session/unlogin');
                     $response->setStatusCode(302);
                     $event->stopPropagation();
 

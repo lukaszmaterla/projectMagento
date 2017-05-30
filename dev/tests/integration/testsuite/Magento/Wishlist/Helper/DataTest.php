@@ -52,7 +52,7 @@ class DataTest extends \Magento\TestFramework\TestCase\AbstractController
         $data = (array)$params['data'];
         $this->assertEquals('11', $data['product']);
         $this->assertArrayHasKey('uenc', $data);
-        $this->assertStringEndsWith('wishlist/index/add/', $params['action']);
+        $this->assertStringEndsWith('wishlist/Index/add/', $params['action']);
     }
 
     public function testGetMoveFromCartParams()
@@ -62,7 +62,7 @@ class DataTest extends \Magento\TestFramework\TestCase\AbstractController
         $data = (array)$params['data'];
         $this->assertEquals('11', $data['item']);
         $this->assertArrayHasKey('uenc', $data);
-        $this->assertStringEndsWith('wishlist/index/fromcart/', $params['action']);
+        $this->assertStringEndsWith('wishlist/Index/fromcart/', $params['action']);
     }
 
     public function testGetUpdateParams()
@@ -76,7 +76,7 @@ class DataTest extends \Magento\TestFramework\TestCase\AbstractController
         $this->assertEquals('11', $data['product']);
         $this->assertEquals('15', $data['id']);
         $this->assertArrayHasKey('uenc', $data);
-        $this->assertStringEndsWith('wishlist/index/updateItemOptions/', $params['action']);
+        $this->assertStringEndsWith('wishlist/Index/updateItemOptions/', $params['action']);
     }
 
     /**

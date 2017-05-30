@@ -36,7 +36,7 @@ class ProductTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetProductUrl()
     {
-        $expectedUrl = 'http://localhost/index.php/simple-product.html';
+        $expectedUrl = 'http://localhost/Index.php/simple-product.html';
         $product = $this->productRepository->get('simple');
         $this->assertEquals($expectedUrl, $this->helper->getProductUrl($product));
 

@@ -73,7 +73,7 @@ class OrdersTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetGridUrl()
     {
-        $this->assertContains('customer/index/orders', $this->block->getGridUrl());
+        $this->assertContains('customer/Index/orders', $this->block->getGridUrl());
     }
 
     /**

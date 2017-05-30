@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="customer">
+            <group id="hello" translate="label" type="text" sortOrder="500" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Hello</label>
+                <field id="message" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Hello message</label>
+                    <comment>This will be shown when no name were provided</comment>
+                </field>
+                <field id="can_ask_name" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Can as about name</label>
+                    <comment>If enabled will show prompt for customer to enter his name.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="message_with_name" translate="label comment" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hello message with name</label>
+                    <comment>This will be shown when customer provided his name. Type {name} in place where customer name should be placed.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

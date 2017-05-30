@@ -10,7 +10,7 @@ class IndexTest extends \Magento\TestFramework\TestCase\AbstractBackendControlle
 {
     public function testViewAction()
     {
-        $this->dispatch('backend/cms/wysiwyg_images/index/target_element_id/page_content/store/undefined/type/image/');
+        $this->dispatch('backend/cms/wysiwyg_images/Index/target_element_id/page_content/store/undefined/type/image/');
         $content = $this->getResponse()->getBody();
         $this->assertNotContains('<html', $content);
         $this->assertNotContains('<head', $content);

@@ -14,10 +14,10 @@ use Magento\Mtf\TestCase\Injectable;
  * Preconditions:
  * 1. Two "default" test simple products is created.
  * 2. Navigate to frontend.
- * 3. Input in "Search" field(top-right part of the index page, near cart icon) 'Simple' and press "Enter" key.
+ * 3. Input in "Search" field(top-right part of the Index page, near cart icon) 'Simple' and press "Enter" key.
  *
  * Steps:
- * 1. Go to frontend on index page.
+ * 1. Go to frontend on Index page.
  * 2. Input in "Search" field test data.
  * 3. Perform asserts.
  *

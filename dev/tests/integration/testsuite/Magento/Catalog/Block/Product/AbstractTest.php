@@ -98,7 +98,7 @@ class AbstractTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($this->product->getId(), $data['product']);
         $this->assertArrayHasKey('uenc', $data);
         $this->assertStringEndsWith(
-            'wishlist/index/add/',
+            'wishlist/Index/add/',
             $params['action']
         );
     }

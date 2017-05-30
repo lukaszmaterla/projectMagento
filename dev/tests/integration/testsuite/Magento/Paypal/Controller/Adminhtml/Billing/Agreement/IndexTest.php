@@ -13,7 +13,7 @@ class IndexTest extends \Magento\TestFramework\TestCase\AbstractBackendControlle
     public function setUp()
     {
         $this->resource = 'Magento_Paypal::billing_agreement_actions_view';
-        $this->uri = 'backend/paypal/billing_agreement/index';
+        $this->uri = 'backend/paypal/billing_agreement/Index';
         parent::setUp();
     }
 }

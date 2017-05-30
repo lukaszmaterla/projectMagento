@@ -36,7 +36,7 @@ class Related extends Section
         foreach ($relatedProducts as $relatedProduct) {
             $relatedTypeUnderscore = substr($relatedProduct, 0, strpos($relatedProduct, '_products'));
             $relatedType = str_replace('_', '', $relatedTypeUnderscore);
-            $this->_rootElement->find('[data-index="button_' . $relatedType . '"]')->click();
+            $this->_rootElement->find('[data-Index="button_' . $relatedType . '"]')->click();
             $context = '';
 
             if (isset($data[$relatedTypeUnderscore . '_products']['value'])) {
@@ -68,7 +68,7 @@ class Related extends Section
         foreach ($relatedProducts as $relatedProduct) {
             $relatedTypeUnderscore = substr($relatedProduct, 0, strpos($relatedProduct, '_products'));
             $relatedType = str_replace('_', '', $relatedTypeUnderscore);
-            $context = $this->browser->find('[data-index="' . $relatedType . '"]');
+            $context = $this->browser->find('[data-Index="' . $relatedType . '"]');
             $relatedBlock = $this->getRelatedGrid($context);
             $columns = ['id', 'name', 'sku'];
             $relatedProducts = $relatedBlock->getRowsData($columns);

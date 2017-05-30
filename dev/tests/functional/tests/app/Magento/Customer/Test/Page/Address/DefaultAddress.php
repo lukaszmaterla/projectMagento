@@ -18,7 +18,7 @@ class DefaultAddress extends Page
     /**
      * URL for customer Dashboard.
      */
-    const MCA = 'customer/address/index';
+    const MCA = 'customer/address/Index';
 
     /**
      * Selector for default address block.

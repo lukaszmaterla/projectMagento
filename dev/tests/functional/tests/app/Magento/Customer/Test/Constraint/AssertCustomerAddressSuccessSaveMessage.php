@@ -45,6 +45,6 @@ class AssertCustomerAddressSuccessSaveMessage extends AbstractConstraint
      */
     public function toString()
     {
-        return 'Success address save message on customer account index page is correct.';
+        return 'Success address save message on customer account Index page is correct.';
     }
 }

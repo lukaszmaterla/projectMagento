@@ -113,7 +113,7 @@ class AuthTest extends \Magento\TestFramework\TestCase\AbstractController
             ]
         );
 
-        $this->dispatch('backend/admin/index/index');
+        $this->dispatch('backend/admin/Index/Index');
 
         $response = \Magento\TestFramework\Helper\Bootstrap::getObjectManager()
             ->get('Magento\Framework\App\ResponseInterface');

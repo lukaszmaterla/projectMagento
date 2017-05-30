@@ -83,12 +83,12 @@ class DataTest extends \PHPUnit_Framework_TestCase
         )->setControllerModule(
             'dummy'
         )->setControllerName(
-            'index'
+            'Index'
         )->setActionName(
             'test'
         );
 
-        $expected = 'http://www.magentocommerce.com/gethelp/en_US/dummy/index/test/';
+        $expected = 'http://www.magentocommerce.com/gethelp/en_US/dummy/Index/test/';
         $this->assertEquals($expected, $this->_helper->getPageHelpUrl(), 'Incorrect help Url');
 
         $this->_helper->addPageHelpUrl('dummy');
@@ -140,7 +140,7 @@ class DataTest extends \PHPUnit_Framework_TestCase
     public function testGetHomePageUrl()
     {
         $this->assertStringEndsWith(
-            'index.php/backend/admin/',
+            'Index.php/backend/admin/',
             $this->_helper->getHomePageUrl(),
             'Incorrect home page URL'
         );

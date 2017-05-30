@@ -44,7 +44,7 @@ class UrlTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetBaseUrlDefaults()
     {
-        $this->assertEquals('http://localhost/index.php/', $this->_model->getBaseUrl());
+        $this->assertEquals('http://localhost/Index.php/', $this->_model->getBaseUrl());
     }
 
     /**
@@ -85,21 +85,21 @@ class UrlTest extends \PHPUnit_Framework_TestCase
         /**
          * Get base URL with default type
          */
-        $this->assertEquals('http://localhost/index.php/', $this->_model->getBaseUrl(), 'Incorrect link url');
+        $this->assertEquals('http://localhost/Index.php/', $this->_model->getBaseUrl(), 'Incorrect link url');
 
         /**
          * Set specified type
          */
         $webUrl = $this->_model->getBaseUrl(['_type' => \Magento\Framework\UrlInterface::URL_TYPE_WEB]);
         $this->assertEquals('http://localhost/', $webUrl, 'Incorrect web url');
-        $this->assertEquals('http://localhost/index.php/', $this->_model->getBaseUrl(), 'Incorrect link url');
+        $this->assertEquals('http://localhost/Index.php/', $this->_model->getBaseUrl(), 'Incorrect link url');
 
         /**
          * Get url with type specified in params
          */
         $mediaUrl = $this->_model->getBaseUrl(['_type' => \Magento\Framework\UrlInterface::URL_TYPE_MEDIA]);
         $this->assertEquals('http://localhost/pub/media/', $mediaUrl, 'Incorrect media url');
-        $this->assertEquals('http://localhost/index.php/', $this->_model->getBaseUrl(), 'Incorrect link url');
+        $this->assertEquals('http://localhost/Index.php/', $this->_model->getBaseUrl(), 'Incorrect link url');
     }
 
     public function getBaseUrlConfiguredDataProvider()
@@ -108,11 +108,11 @@ class UrlTest extends \PHPUnit_Framework_TestCase
             [['_type' => \Magento\Framework\UrlInterface::URL_TYPE_WEB], 'http://sample.com/base_path/'],
             [
                 ['_type' => \Magento\Framework\UrlInterface::URL_TYPE_LINK],
-                'http://sample.com/base_link_path/index.php/'
+                'http://sample.com/base_link_path/Index.php/'
             ],
             [
                 ['_type' => \Magento\Framework\UrlInterface::URL_TYPE_LINK, '_secure' => 1],
-                'https://sample.com/base_link_path/index.php/'
+                'https://sample.com/base_link_path/Index.php/'
             ]
         ];
     }
@@ -147,14 +147,14 @@ class UrlTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetRouteUrl()
     {
-        $this->assertEquals('http://localhost/index.php/', $this->_model->getRouteUrl());
+        $this->assertEquals('http://localhost/Index.php/', $this->_model->getRouteUrl());
         $this->assertEquals(
-            'http://localhost/index.php/catalog/product/view/id/50/',
+            'http://localhost/Index.php/catalog/product/view/id/50/',
             $this->_model->getRouteUrl('catalog/product/view', ['id' => 50])
         );
         $this->assertEquals(
-            'http://localhost/index.php/fancy_uri',
-            $this->_model->getRouteUrl('core/index/index', ['_direct' => 'fancy_uri'])
+            'http://localhost/Index.php/fancy_uri',
+            $this->_model->getRouteUrl('core/Index/Index', ['_direct' => 'fancy_uri'])
         );
     }
 
@@ -174,7 +174,7 @@ class UrlTest extends \PHPUnit_Framework_TestCase
             'catalog/product/view',
             ['_fragment' => 'anchor', '_escape' => 1, '_query' => 'foo=bar', '_nosid' => 1, 'id' => 100]
         );
-        $this->assertEquals('http://localhost/index.php/catalog/product/view/id/100/?foo=bar#anchor', $result);
+        $this->assertEquals('http://localhost/Index.php/catalog/product/view/id/100/?foo=bar#anchor', $result);
     }
 
     /**
@@ -184,9 +184,9 @@ class UrlTest extends \PHPUnit_Framework_TestCase
     public function testGetUrlDoesntAddQueryParamsOnConsequentCalls()
     {
         $result = $this->_model->getUrl('catalog/product/view', ['_query' => 'foo=bar', '_nosid' => 1]);
-        $this->assertEquals('http://localhost/index.php/catalog/product/view/?foo=bar', $result);
+        $this->assertEquals('http://localhost/Index.php/catalog/product/view/?foo=bar', $result);
         $result = $this->_model->getUrl('catalog/product/view', ['_nosid' => 1]);
-        $this->assertEquals('http://localhost/index.php/catalog/product/view/', $result);
+        $this->assertEquals('http://localhost/Index.php/catalog/product/view/', $result);
     }
 
     /**
@@ -197,9 +197,9 @@ class UrlTest extends \PHPUnit_Framework_TestCase
     public function testGetUrlDoesntAddFragmentOnConsequentCalls()
     {
         $result = $this->_model->getUrl('catalog/product/view', ['_nosid' => 1, '_fragment' => 'section']);
-        $this->assertEquals('http://localhost/index.php/catalog/product/view/#section', $result);
+        $this->assertEquals('http://localhost/Index.php/catalog/product/view/#section', $result);
         $result = $this->_model->getUrl('catalog/product/view', ['_nosid' => 1]);
-        $this->assertEquals('http://localhost/index.php/catalog/product/view/', $result);
+        $this->assertEquals('http://localhost/Index.php/catalog/product/view/', $result);
     }
 
     /**
@@ -245,128 +245,128 @@ class UrlTest extends \PHPUnit_Framework_TestCase
                 'r_1/c_1/a_1/p_1/v_1',
                 null,
                 null,
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/',
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/',
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/',
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/',
             ],
             [
                 'r_1/c_1/a_1/p_1/v_1',
                 'r_1/c_1/a_1/p_1/v_2',
                 null,
                 null,
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/',
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_2/'
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/',
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_2/'
             ],
             [
                 'r_1/c_1/a_1/p_1/v_1',
                 'r_1/c_1/a_1/p_1',
                 null,
                 null,
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/',
-                'http://localhost/index.php/r_1/c_1/a_1/'
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/',
+                'http://localhost/Index.php/r_1/c_1/a_1/'
             ],
             [
                 'r_1/c_1/a_1/p_1/v_1',
                 'r_1/c_1/a_1/p_2/v_2',
                 null,
                 null,
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/',
-                'http://localhost/index.php/r_1/c_1/a_1/p_2/v_2/'
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/',
+                'http://localhost/Index.php/r_1/c_1/a_1/p_2/v_2/'
             ],
             [
                 'r_1/c_1/a_1/p_1/v_1',
                 'r_1/c_1/a_1',
                 null,
                 null,
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/',
-                'http://localhost/index.php/r_1/c_1/a_1/'
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/',
+                'http://localhost/Index.php/r_1/c_1/a_1/'
             ],
             [
                 'r_1/c_1/a_1/p_1/v_1',
                 'r_1/c_1/a_2',
                 null,
                 null,
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/',
-                'http://localhost/index.php/r_1/c_1/a_2/'
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/',
+                'http://localhost/Index.php/r_1/c_1/a_2/'
             ],
             [
                 'r_1/c_1/a_1/p_1/v_1',
                 'r_1/c_1',
                 null,
                 null,
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/',
-                'http://localhost/index.php/r_1/c_1/'
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/',
+                'http://localhost/Index.php/r_1/c_1/'
             ],
             [
                 'r_1/c_1/a_1/p_1/v_1',
                 'r_1/c_2',
                 null,
                 null,
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/',
-                'http://localhost/index.php/r_1/c_2/'
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/',
+                'http://localhost/Index.php/r_1/c_2/'
             ],
             [
                 'r_1/c_1/a_1/p_1/v_1',
                 'r_1',
                 null,
                 null,
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/',
-                'http://localhost/index.php/r_1/'
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/',
+                'http://localhost/Index.php/r_1/'
             ],
             [
                 'r_1/c_1/a_1/p_1/v_1',
                 'r_2',
                 null,
                 null,
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/',
-                'http://localhost/index.php/r_2/'
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/',
+                'http://localhost/Index.php/r_2/'
             ],
             [
                 'r_1/c_1/a_1/p_1/v_1',
                 null,
                 null,
                 null,
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/',
-                'http://localhost/index.php/'
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/',
+                'http://localhost/Index.php/'
             ],
             [
                 'r_1/c_1/a_1',
                 'r_1/c_1/a_1/p_1/v_1',
                 null,
                 null,
-                'http://localhost/index.php/r_1/c_1/a_1/',
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/'
+                'http://localhost/Index.php/r_1/c_1/a_1/',
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/'
             ],
             [
                 null,
                 'r_1/c_1/a_1',
                 null,
                 null,
-                'http://localhost/index.php/',
-                'http://localhost/index.php/r_1/c_1/a_1/'
+                'http://localhost/Index.php/',
+                'http://localhost/Index.php/r_1/c_1/a_1/'
             ],
             [
                 'r_1/c_1/a_1/p_1/v_1',
                 'r_1/c_1/a_1/p_1/v_1',
                 ['p_2' => 'v_2'],
                 ['p_2' => 'v_2'],
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/p_2/v_2/',
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/p_2/v_2/'
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/p_2/v_2/',
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/p_2/v_2/'
             ],
             [
                 'r_1/c_1/a_1/p_1/v_1',
                 'r_1/c_1/a_1',
                 ['p_2' => 'v_2'],
                 ['p_2' => 'v_2'],
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/p_2/v_2/',
-                'http://localhost/index.php/r_1/c_1/a_1/p_2/v_2/'
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/p_2/v_2/',
+                'http://localhost/Index.php/r_1/c_1/a_1/p_2/v_2/'
             ],
             [
                 'r_1/c_1/a_1/p_1/v_1',
                 null,
                 ['p_2' => 'v_2'],
                 ['p_1' => 'v_1', 'p_2' => 'v_2'],
-                'http://localhost/index.php/r_1/c_1/a_1/p_1/v_1/p_2/v_2/',
-                'http://localhost/index.php/p_1/v_1/p_2/v_2/'
+                'http://localhost/Index.php/r_1/c_1/a_1/p_1/v_1/p_2/v_2/',
+                'http://localhost/Index.php/p_1/v_1/p_2/v_2/'
             ]
         ];
     }
@@ -383,7 +383,7 @@ class UrlTest extends \PHPUnit_Framework_TestCase
     public function testGetDirectUrl()
     {
         $directUrl = $this->_model->getDirectUrl('fancy_uri', ['_query' => ['foo' => 'bar']]);
-        $this->assertEquals('http://localhost/index.php/fancy_uri?foo=bar', $directUrl);
+        $this->assertEquals('http://localhost/Index.php/fancy_uri?foo=bar', $directUrl);
     }
 
     /**

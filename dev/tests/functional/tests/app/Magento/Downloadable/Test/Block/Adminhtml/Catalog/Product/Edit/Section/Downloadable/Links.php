@@ -19,14 +19,14 @@ class Links extends Form
      *
      * @var string
      */
-    protected $addNewLinkRow = '[data-index="link"] [data-action="add_new_row"]';
+    protected $addNewLinkRow = '[data-Index="link"] [data-action="add_new_row"]';
 
     /**
      * Downloadable link item block.
      *
      * @var string
      */
-    protected $rowBlock = 'table[data-index=link] tbody tr:nth-child(%d)';
+    protected $rowBlock = 'table[data-Index=link] tbody tr:nth-child(%d)';
 
     /**
      * Downloadable link title block.

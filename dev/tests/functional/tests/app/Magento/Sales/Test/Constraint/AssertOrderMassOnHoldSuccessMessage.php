@@ -11,7 +11,7 @@ use Magento\Mtf\Constraint\AbstractConstraint;
 
 /**
  * Class AssertOrderMassOnHoldSuccessMessage
- * Assert mass on hold success message is displayed on order index page
+ * Assert mass on hold success message is displayed on order Index page
  */
 class AssertOrderMassOnHoldSuccessMessage extends AbstractConstraint
 {
@@ -25,7 +25,7 @@ class AssertOrderMassOnHoldSuccessMessage extends AbstractConstraint
     const SUCCESS_ON_HOLD_MESSAGE = 'You have put %d order(s) on hold.';
 
     /**
-     * Assert on hold success message is displayed on order index page
+     * Assert on hold success message is displayed on order Index page
      *
      * @param OrderIndex $orderIndex
      * @param int $ordersCount
@@ -46,6 +46,6 @@ class AssertOrderMassOnHoldSuccessMessage extends AbstractConstraint
      */
     public function toString()
     {
-        return 'On hold success message is displayed on order index page.';
+        return 'On hold success message is displayed on order Index page.';
     }
 }
